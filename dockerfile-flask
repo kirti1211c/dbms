@@ -1,0 +1,15 @@
+FROM python:3.8
+
+RUN mkdir /app
+WORKDIR /app
+
+EXPOSE 4001
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY . .
+
+ENTRYPOINT ["python"]
+CMD ["app.py"]

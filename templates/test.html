@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Postal Codes in the DB</h1>
+  <table>
+    <tr>
+        <td>Postal Code Number</td>
+        <td>Postal City</td>
+        <td>Postal State</td>
+    </tr>
+  {% for code in data %}
+    <tr>
+        {% for detail in code %}
+            <td>{{detail}}</td>
+        {% endfor %}
+    </tr>
+  {% endfor %}
+  </table>
+{% endblock %}

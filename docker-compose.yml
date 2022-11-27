@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+    image: kirti1211c/kirti
+  flask:
+    image: webapp-flask
+    build:
+      context: .
+      dockerfile: dockerfile-flask
+    volumes:
+      - "./:/app"
+    ports:
+      - 4001:4001
+
