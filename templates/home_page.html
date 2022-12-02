@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <style>
+    h1 {
+      padding-top: 100px;
+    }
+    button {
+      background-color: rgb(134, 17, 17);
+      border: none;
+      color: #f5bab7;
+      padding: 15px 15px;
+      font-size: 35px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      border-radius: 15px;
+    }
+  </style>
+  <body style="font-size: 40px; background-color: #f5bab7">
+    <h1 style="text-align: center; color: rgb(134, 17, 17)">
+      Welcome to Blood Bank Managment System
+    </h1>
+    <p style="text-align: center">
+      <a href="{{url_for('view_data.view_data_')}}"><button type="button">View Database</button></a>
+    </p>
+    <p style="text-align: center">
+      <a href="{{url_for('add_employee.add_employee_')}}"><button type="button">Be an employee</button></a>
+    </p>
+  </body>
+</html>
+
+

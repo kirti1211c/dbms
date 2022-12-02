@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+</head>
+<style>
+    
+    input{
+        height:22px;
+        width: 100px;
+        background-color: #f5bab7;
+        border: 2px solid  rgb(134, 17, 17);
+    }
+    
+    div{
+        padding: 5px;
+    }
+    button {
+      background-color: rgb(134, 17, 17);
+      border: none;
+      color: #f5bab7;
+      padding: 10px 10px;
+      font-size: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      border-radius: 15px;
+    }
+    h3 {
+      font: bold;
+      font-family: monospace;
+      margin-top: 0;
+	  /* margin-bottom: 0; */
+	  padding-bottom: 0;
+    }
+    body{
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+</style>
+<body style="font-size: 30px; background-color: #f5bab7">
+    <h3 style="font-size: 40px; color: rgb(134, 17, 17)"> ENTER EMPLOYEE DETAILS</h3>
+
+    <form class="needs-validation" action="{{url_for('add_employee.add_employee_')}}" method="POST">
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="id1" class="mb-2" style="color: rgb(134, 17, 17)">Enter Employee_ID</label>
+                <input type="number" inputmode="numeric" class="form-control" name="id1" id="id1"
+                       placeholder="employee_id" value="{{id1}}"  required > 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="id2" class="mb-2" style="color: rgb(134, 17, 17)">Enter Role_ID</label>
+                <input type="number" inputmode="numeric" class="form-control" name="id2" id="id2"
+                       placeholder="role_id" value="{{id2}}" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="person" class="mb-2" style="color: rgb(134, 17, 17)">Enter Name</label>
+                <input  type="text" inputmode="text" class="form-control" name="person" id="person"
+                       placeholder="name" value="{{person}}" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="phone_no" class="mb-2" style="color: rgb(134, 17, 17)">Enter Mobile Number</label>
+                <input type="text" inputmode="text" class="form-control" name="phone_no" id="phone_no"
+                       placeholder="phone_no" value="{{phone_no}}" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="gmail" class="mb-2" style="color: rgb(134, 17, 17)">Enter Email</label>
+                <input type="text" inputmode="text" class="form-control" name="gmail" id="gmail"
+                       placeholder="gmail" value="{{gmail}}" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="home" class="mb-2" style="color: rgb(134, 17, 17)">Enter Address</Address></label>
+                <input type="text" inputmode="text" class="form-control" name="home" id="home"
+                       placeholder="address" value="{{home}}" required>
+            </div>
+        </div>
+
+        
+
+
+        <button class="btn btn-primary btn-lg btn-block  mb-5" type="submit">Submit</button>
+    </form>
+</body>
+</html>

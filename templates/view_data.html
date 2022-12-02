@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Databse</title>
+  </head>
+  <style>
+    button {
+      background-color: rgb(134, 17, 17);
+      border: none;
+      color: #f5bab7;
+      padding: 15px 15px;
+      font-size: 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      border-radius: 15px;
+      margin: 0;
+    }
+    .b1 {
+      font-size: 20px;
+    }
+    body {
+      padding-left: 20px;
+      padding-top: 10px;
+    }
+    h3 {
+      font: bold;
+      font-family: monospace;
+      margin-top: 0;
+    }
+    h5 {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+    .div2{
+      padding-top: 20px;
+    }
+  </style>
+  <body style="font-size: 40px; background-color: #f5bab7">
+    <h3 style="color: rgb(134, 17, 17)">VIEW ALL DATABASE</h3>
+
+    <div>
+      <h5 style="color: rgb(134, 17, 17)">View Role Database</h5>
+      <a href="{{ url_for('roles_data.roles_data_') }}"
+        ><button type="button" class="b1">View Data</button></a
+      >
+    </div>
+
+
+    <div class="div2">
+      <h5 style="color: rgb(134, 17, 17)">View Employee Database</h5>
+      <a href="{{ url_for('employee_data.employee_data_') }}"
+        ><button type="button" class="b1">View Data</button></a
+      >
+    </div>
+
+    <p>
+      <a href="{{url_for('home_page.home_page_')}}"><button type="button" class="b2">Home</button></a>
+    </p>
+  </body>
+</html>
