@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Data</title>
+  </head>
+  <style>
+	table, th, td {
+		border: 3px solid black;
+  		border-collapse: collapse;
+    }
+	th,td {
+    	padding-left: 20px;
+		padding-right: 20px;
+
+  	}
+	h2 {
+      font: bold;
+      font-family: monospace;
+      margin-top: 0;
+	  margin-bottom: 0;
+	  padding-bottom: 0;
+    }
+
+	body{
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+  </style>
+
+  <body style="font-size: 40px; background-color: #f5bab7">
+    <h2 style="color: rgb(134, 17, 17)">BLOOD</h2>
+
+    <div class="row justify-content-md-center">
+      <div class="col-md-3 order-md-1">
+        <br /> 
+        {% if result %}
+        <!-- <h4 class="mb-4 " >Data</h4> -->
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <!-- <th scope="col" style="color: rgb(134, 17, 17)"> S.NO. </th> -->
+              <th scope="col" style="color: rgb(134, 17, 17)">  blood_id  </th>
+              <th scope="col" style="color: rgb(134, 17, 17)">  blood_type  </th>
+			  <th scope="col" style="color: rgb(134, 17, 17)">  best_before  </th>
+              <th scope="col" style="color: rgb(134, 17, 17)">  donor_id  </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for code in result %}
+            <tr>
+              <!-- <th scope="row" style="color: rgb(134, 17, 17)">
+                {{value}}
+              </th> -->
+              {% for detail in code %} {% for value, bl in detail.items() %} {%
+              if bl %}
+              <td class="light" style="color: rgb(134, 17, 17)"> {{value}} </td>
+              {% else %}
+              <td class="normal" style="color: rgb(134, 17, 17)"> {{value}}</td>
+              {% endif %} {% endfor %} {% endfor %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
